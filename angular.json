@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "saladstories"
+    }
+  },
+  "defaultProject": "saladstories",
+  "cli": {
+    "analytics": "dfae5671-2e4d-44e7-adca-b49611757865"
+  }
 }
