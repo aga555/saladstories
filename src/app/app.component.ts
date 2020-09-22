@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,43 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'saladstories';
+  title = '';
+  url = '';
+  listItems: any;
+
+  constructor() {
+    this.listItems = [
+      {
+        name: 'Home',
+        link: '#/Home'
+      },
+      {
+        name: 'Products',
+        link: '#/products'
+      },
+      {
+        name: 'Cart',
+        link: '#/cart'
+      },
+      {
+        name: 'About',
+        link: '#/about'
+      }
+
+    ];
+  }
+
+  add(title, url) {
+    if (title !== '' && url !== '') {
+      url = 'http://' + url;
+      this.listItems.push({
+        name: title,
+        link: url,
+        isNew: true
+      });
+      this.title = '';
+      this.url = '';
+    }
+  }
+
 }
