@@ -9,6 +9,7 @@ import {routes} from './app.router';
 import { CartComponent } from './cart/cart.component';
 import { ProductsComponent } from './products/products.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -19,7 +20,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     AboutComponent,
     CartComponent,
     ProductsComponent,
-    SidebarComponent
+    SidebarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

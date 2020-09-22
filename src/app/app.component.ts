@@ -14,7 +14,7 @@ export class AppComponent {
     this.listItems = [
       {
         name: 'Home',
-        link: '#/Home'
+        link: '#/home'
       },
       {
         name: 'Products',
