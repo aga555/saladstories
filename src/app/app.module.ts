@@ -6,6 +6,9 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {AppComponent} from './app.component';
 import {AboutComponent} from './about/about.component';
 import {routes} from './app.router';
+import { CartComponent } from './cart/cart.component';
+import { ProductsComponent } from './products/products.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 
@@ -13,7 +16,10 @@ import {routes} from './app.router';
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent
+    AboutComponent,
+    CartComponent,
+    ProductsComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
