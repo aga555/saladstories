@@ -13,5 +13,10 @@
   display: flex;
   justify-content: space-between;
 
-
+}
+.bill-container{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  font-size: 20px;
 }
