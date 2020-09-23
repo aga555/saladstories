@@ -1,3 +1,14 @@
 .card{
   margin: 5px;
 }
+.dropdown-button{
+display: block;
+  margin: 5px;
+}
+.dropdown-list{
+width: 250px;
+}
+.baket-dropdown-title{
+  font-size: 20px;
+  color: #333;
+}
