@@ -50,10 +50,22 @@ export class ProductsComponent implements OnInit {
   }
 
   goToCart() {
-
+    this.router.navigate(['/cart']);
   }
 
-  addToCart(i: number) {
+  addToCart(index) {
+    let product = this.products[index];
+    let cartData = [];
+    let data = localStorage.getItem('cart');
+    if (data !== null) {
+      cartData = JSON.parse(data);
+    }
+    cartData.push(product);
+    this.updateCartData(cartData);
+    localStorage.setItem('cart', JSON.stringify(cartData));
+  }
 
+  updateCartData(cartData) {
+    this.cartProducts = cartData;
   }
 }
