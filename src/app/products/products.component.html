@@ -29,3 +29,25 @@
     </div>
   </div>
 </div>
+<hr>
+<div class="container">
+  <div class="row">
+
+
+        <div class="card" style="width: 18rem;" *ngFor="let product of products; let i=index">
+          <img class="card-img-top" [src]="product.img">
+          <div class="card-body">
+            <p><strong>
+              {{product.title}}:${{product.price}}
+            </strong></p>
+            <p>{{product.description}}</p>
+
+              <button class="btn-dark " (click)="addToCart(i)" [disabled]="product.isAdded===true">Add to Cart</button>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
