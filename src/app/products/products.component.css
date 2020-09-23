@@ -12,3 +12,10 @@ width: 250px;
   font-size: 20px;
   color: #333;
 }
+.inf-status-card{
+  color: green;
+  text-align: right;
+}
+.btn-dark{
+  cursor: pointer;
+}

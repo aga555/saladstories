@@ -19,7 +19,7 @@ export class CartComponent implements OnInit {
   updateTotoal() {
     this.bill = 0;
     for (let i in this.cartProducts) {
-      this.bill = this.bill + this.cartProducts[i].price + this.cartProducts[i].quantity;
+      this.bill = this.bill + this.cartProducts[i].price * this.cartProducts[i].quantity;
     }
   }
 

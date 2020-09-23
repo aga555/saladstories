@@ -57,12 +57,14 @@ export class ProductsComponent implements OnInit {
     let product = this.products[index];
     let cartData = [];
     let data = localStorage.getItem('cart');
-    if (data !== null) {
+    if (data !== "null") {
       cartData = JSON.parse(data);
     }
     cartData.push(product);
     this.updateCartData(cartData);
     localStorage.setItem('cart', JSON.stringify(cartData));
+    data = localStorage.getItem('cart');
+    this.products[index].isAdded = true;
   }
 
   updateCartData(cartData) {
