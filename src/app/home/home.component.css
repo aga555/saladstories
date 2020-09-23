@@ -1,0 +1,24 @@
+
+.carousel-caption{
+  text-align: left;
+  position: inherit;
+  color: #333;
+}
+.img-fluid{
+  height: 600px;
+  margin: auto;
+}
+.carousel-caption{
+  margin: auto;
+  align-items: center;
+}
+.salad-carousel-main{
+  display: flex;
+  align-items: center;
+  background-color: lightgray;
+}
+.salad-carusel-header{
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
