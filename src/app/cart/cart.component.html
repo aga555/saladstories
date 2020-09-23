@@ -5,24 +5,20 @@
 
   <br>
   <hr>
-  <div class="carts-body-container row">
-    <div class="cart-product-container row " *ngFor="let item of cartProducts; let i=index">
-      <div class="col-md-6">
-        <img class="custom-image-style" [src]="item.img">
-      </div>
-      <div clas="cart-product-description col-md-6">
-        <div><p>{{item.title}}</p></div>
-        <div><p><strong>{{item.price}}</strong></p></div>
-      </div>
-      <div clas="cart-product-container col-md-2">
-        <input (change)="updateTotoal()" [(ngModel)]="item.quantity" type="number" class="form-control">
-      </div>
+
+    <div class="cart-product-container row  col-md-12" *ngFor="let item of cartProducts; let i=index">
       <div class="col-md-2">
-  <a class="text-danger" (click)="removeItem(i)">x</a>
+        <img class="custom-image-style cart-img" [src]="item.img">
       </div>
+      <div class="cart-product-description col-md-3" style="justify-content: space-between"> <span>{{item.title}}</span><span>{{item.price}} $</span>
+      </div>
+      <div class="cart-product-info col-md-2">
+        <input (change)="updateTotoal()" [(ngModel)]="item.quantity" type="number" class="form-control"></div>
+      <div class="col-md-2">
+        <a class="text-danger" (click)="removeItem(i)">x</a></div>
     </div>
   </div>
-</div>
+
 <hr>
 
 <div  class=" container row" *ngIf="!cartProducts">
@@ -36,6 +32,6 @@
   </div>
   <div class="col-md-4">
     <span *ngIf="!cartProducts"><strong> $0 </strong></span>
-    <span *ngIf="cartProducts.length"><strong> {{bill}}</strong></span>
+    <span *ngIf="cartProducts"><strong> {{bill}}</strong></span>
   </div>
 </div>
